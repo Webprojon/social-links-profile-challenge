@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+/* VARIABLES */
+:root {
+  /* Colors */
+  --off-black: hsl(0, 0%, 8%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --grey: hsl(0, 0%, 20%);
+  --white: hsl(0, 0%, 100%);
+  --green: hsl(75, 94%, 57%);
+
+  /* Fonts */
+  --body-font-family: "Inter", sans-serif;
+  --font-wght-700: 700;
+  --font-wght-600: 600;
+  --font-wght-400: 400;
+}
+
+/* GENERAL CSS */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  background-color: var(--off-black);
+}
+
+.profile-main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card {
+  width: 20rem;
+  border-radius: 0.8rem;
+  background-color: var(--dark-grey);
+  padding: 2rem;
+  text-align: center;
+}
+
+.image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.name {
+  line-height: 0.5rem;
+  color: var(--white);
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  font-weight: var(--font-wght-600);
+}
+
+.city {
+  color: var(--green);
+  font-size: 0.8rem;
+}
+
+.job {
+  font-weight: var(--font-wght-400);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  margin: 1.6rem 0 1.2rem 0;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--grey);
+  border-radius: 0.5rem;
+  padding: 0.7rem 0;
+  font-size: 14px;
+  font-weight: var(--font-wght-700);
+}
+
+.social-links a:active {
+  color: var(--grey);
+  background-color: var(--green);
+  transition: all 0.2s linear;
+}
+
+.social-links a:nth-child(even) {
+  margin: 1.1rem 0;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 500px) {
+  .profile-card {
+    width: 75%;
+  }
+}
